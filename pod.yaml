@@ -8,11 +8,11 @@ metadata:
   namespace: dev
 spec:
   containers:
-  - image: ngninx
-    name: web-pod
-    ports:
-    - containerPort: 80
-    resources: {}
+    - image: nginx
+      name: web-pod
+      ports:
+        - containerPort: 80
+      resources: {}
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}

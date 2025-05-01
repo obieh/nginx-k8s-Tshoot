@@ -142,9 +142,32 @@ Scroll down to see more information about the error.
 
 * Run `k apply -f pod.yaml` to create the pod again.
 
-![apply-again](./img/1stk-apply.png)
+![apply-again](./img/k-apply-afta-delete.png)
 
 ### The pod have been created successful. Let me run other T-shhot command to ascertain pod is running.
 
-* Run `k get pods -n dev`
+* Run `k get pods -n dev` to see pod details.
 
+![pod](./img/k-get-afta-delete.png)
+
+### Pod appears to be running now.
+
+* Run `k describe pod web-pod -n dev` to see more pod details.
+
+![afta-del](./img/k-describe-afta-delete.png)
+
+### Details in the message column confirm the pod is up and running.
+
+* To view pod logs Run `k get logs web-deb -n dev
+
+![log](./img/k-logs-afta-delete.png)
+
+### Another proof that the is runing well
+
+### Now we can login to the pod bash.
+
+* Run `k exec -it web-pod -n dev --/bin/bash`
+
+![lod](./img/k-exec-afta-delete.png)
+
+### Pod runs successfully.

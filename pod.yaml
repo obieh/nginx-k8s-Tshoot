@@ -16,3 +16,18 @@ spec:
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+  namespace: dev
+spec:
+  type: LoadBalancer
+  selector:
+    name: web-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

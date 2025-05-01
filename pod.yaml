@@ -17,7 +17,7 @@ spec:
   restartPolicy: Always
 status: {}
 
-
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -27,6 +27,7 @@ spec:
   type: LoadBalancer
   selector:
     name: web-pod
+    app: nginx
   ports:
     - protocol: TCP
       port: 80

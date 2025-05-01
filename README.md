@@ -171,3 +171,27 @@ Scroll down to see more information about the error.
 ![lod](./img/k-exec-afta-delete.png)
 
 ### Pod runs successfully.
+
+## Expose pod to public
+### Minikube tunnel + Loadbalancer will be used to expose our pod to public
+
+* First edit the pod.yaml file adding the following code
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+  namespace: dev
+spec:
+  type: LoadBalancer
+  selector:
+    name: web-pod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+* Run `k apply -f pod.yaml` to create the service
+
+### Start minikube tunnel
+* Run `minikube tunnel` on another terminal

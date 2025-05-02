@@ -171,3 +171,19 @@ Scroll down to see more information about the error.
 ![lod](./img/k-exec-afta-delete.png)
 
 ### Pod runs successfully.
+
+## Expose nginx Service
+
+### NodePort will be used to expose the service. Only for development purpose.
+
+* Run `kubectl expose pod web-pod --port=80 --type=NodePort -n dev
+` to expose the app port
+![run-to-expose](./img/nodeportexpose.png)
+
+* Run `minikube service web-pod -n dev --url` to get the url
+![expose](./img/expose-node-service.png)
+
+* Copy the entire url port number inclusive to the browser. You should nginx home page.
+
+![home](./img/welcome-nginx.png)
+

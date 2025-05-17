@@ -44,7 +44,7 @@ This Projects Demonstrates How to Troubleshoot Issues with Nginx Application in 
 ![namespace](./img/Screenshot%20from%202025-04-30%2012-10-17.png)
 
 ## Create the web-pod yaml (dry run)
-* Run ` k run web-pod --image=nginx --namespace=dev --port=80 $do > pod.yaml`
+* Run ` k run web-pod --image=ngninx --namespace=dev --port=80 $do > pod.yaml`
 * This will just create the yaml file and save it as pod.yaml
 
 ## View the dry-run yaml file

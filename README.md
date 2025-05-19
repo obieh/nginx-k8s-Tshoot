@@ -144,7 +144,7 @@ Scroll down to see more information about the error.
 
 ![apply-again](./img/k-apply-afta-delete.png)
 
-### The pod have been created successful. Let me run other T-shhot command to ascertain pod is running.
+### The pod have been created successful. Let me run other T-shot command to ascertain pod is running.
 
 * Run `k get pods -n dev` to see pod details.
 
@@ -187,3 +187,4 @@ Scroll down to see more information about the error.
 
 ![home](./img/welcome-nginx.png)
 
+## Testing for github webhook
